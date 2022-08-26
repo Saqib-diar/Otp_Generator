@@ -1,7 +1,7 @@
 const express = require('express')
 const app = express()
 
-require('./model')
+require('./models')
 
 
 app.use(express.json())
@@ -17,6 +17,6 @@ app.get('*', (req, res)=>{
 
 
 const port = 8080
-app.listen(port, ()=>{
+module.exports = app.listen(port, ()=>{
     console.log(`server is running on port http://localhost:${port}`);
 })
